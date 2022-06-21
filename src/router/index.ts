@@ -14,7 +14,7 @@ const routes: Array<RouteRecordRaw> = [
     path: '/new-user',
     name: 'UsersNew',
     component: UsersNew,
-    meta: { pageName: 'New User' },
+    meta: { pageName: 'Create New User' },
   },
 ]
 

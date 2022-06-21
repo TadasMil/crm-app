@@ -13,6 +13,7 @@ module.exports = {
         'primary-200': '#232a54',
         secondary: '#FAEBEFFF',
         danger: '#FF5252',
+        success: '#4BB543',
       },
     },
   },

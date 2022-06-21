@@ -1,16 +1,8 @@
 <script setup name="UsersIndexUserList" lang="ts">
-interface IUser {
-  name: string
-  surrname: string
-  email: string
-  city: string
-  street: string
-  houseNumber: string
-  zipCode: string
-}
+import { IUserEntity } from '../helpers/interfaces'
 
 defineProps<{
-  users: IUser[]
+  users: IUserEntity[]
 }>()
 </script>
 
