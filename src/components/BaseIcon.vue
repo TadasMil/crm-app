@@ -1,12 +1,9 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 
-const props = defineProps({
-  icon: {
-    type: String,
-    default: '',
-  },
-})
+const props = defineProps<{
+  icon: string
+}>()
 
 const iconPath = computed(() => `/icons/dashboard.svg?#${props.icon}`)
 </script>

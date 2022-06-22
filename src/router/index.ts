@@ -1,7 +1,8 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 
 import UsersIndex from '../views/UsersIndex.vue'
-import UsersNew from '../views/UsersNew.vue'
+import UserEdit from '../views/UserEdit.vue'
+import UserNew from '../views/UserNew.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -12,9 +13,15 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: '/new-user',
-    name: 'UsersNew',
-    component: UsersNew,
+    name: 'UserNew',
+    component: UserNew,
     meta: { pageName: 'Create New User' },
+  },
+  {
+    path: '/edit-user/:id',
+    name: 'UserEdit',
+    component: UserEdit,
+    meta: { pageName: 'Edit User' },
   },
 ]
 

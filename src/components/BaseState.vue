@@ -4,15 +4,14 @@ import { injectState } from '../composables/useState'
 import BaseLoading from './BaseLoading.vue'
 import BaseSuccess from './BaseSuccess.vue'
 
-const props = defineProps({
-  injectKey: {
-    type: String,
-    default: 'state',
-  },
-  successTitle: {
-    type: String,
-    default: '',
-  },
+interface Props {
+  injectKey?: string
+  successTitle?: string
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  injectKey: 'state',
+  successTitle: '',
 })
 
 const { stateIsLoading, stateIsIdle, stateIsSuccess } = injectState(

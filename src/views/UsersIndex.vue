@@ -1,5 +1,8 @@
 <script setup name="UsersIndex" lang="ts">
 import { useRouter } from 'vue-router'
+import { computed } from 'vue'
+
+import { storage } from '../helpers/storage'
 
 import UsersIndexUserList from '../components/UsersIndexUserList.vue'
 import BaseButton from '../components/BaseButton.vue'
@@ -9,9 +12,11 @@ const router = useRouter()
 
 const redirectToUserCreationPage = () => {
   router.push({
-    name: 'UsersNew',
+    name: 'UserNew',
   })
 }
+
+const users = computed(() => storage.getUsers())
 </script>
 
 <template>
@@ -23,6 +28,6 @@ const redirectToUserCreationPage = () => {
       </div>
     </BaseButton>
 
-    <UsersIndexUserList :users="[]" />
+    <UsersIndexUserList :users="users" />
   </div>
 </template>

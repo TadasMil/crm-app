@@ -1,6 +1,6 @@
 <script setup lang="ts" name="BaseLoading">
 interface Props {
-  title: string
+  title?: string
 }
 
 withDefaults(defineProps<Props>(), {

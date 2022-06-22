@@ -1,7 +1,7 @@
 <script setup name="UsersIndexUserList" lang="ts">
 import { IUserEntity } from '../helpers/interfaces'
 
-defineProps<{
+const props = defineProps<{
   users: IUserEntity[]
 }>()
 </script>
@@ -22,26 +22,36 @@ defineProps<{
           </th>
         </tr>
       </thead>
-      <tbody>
+      <tbody v-if="users.length">
         <tr
+          v-for="user in users"
+          :key="user.id"
           class="border-b odd:bg-white even:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 odd:dark:bg-gray-800 even:dark:bg-gray-700"
         >
           <th
             scope="row"
             class="whitespace-nowrap px-6 py-4 font-medium text-gray-900 dark:text-white"
           >
-            Apple MacBook Pro 17"
+            {{ user.firstName }} {{ user.lastName }}
           </th>
-          <td class="px-6 py-4">Sliver</td>
-          <td class="px-6 py-4">Laptop</td>
-          <td class="px-6 py-4">$2999</td>
-          <td class="px-6 py-4">$2999</td>
-          <td class="px-6 py-4">$2999</td>
+          <td class="px-6 py-4">{{ user.email }}</td>
+          <td class="px-6 py-4">{{ user.city }}</td>
+          <td class="px-6 py-4">{{ user.street }}</td>
+          <td class="px-6 py-4">{{ user.houseNumber }}</td>
+          <td class="px-6 py-4">{{ user.zipCode }}</td>
           <td class="px-6 py-4 text-right">
-            <a href="#" class="font-medium text-primary hover:underline"
-              >Edit</a
+            <router-link
+              :to="{ name: 'UserEdit', params: { id: user.id } }"
+              class="font-medium text-primary hover:underline"
             >
+              Edit
+            </router-link>
           </td>
+        </tr>
+      </tbody>
+      <tbody v-else class="h-20 w-full bg-white">
+        <tr class="text-md text-center">
+          <td colspan="7">No users found.</td>
         </tr>
       </tbody>
     </table>

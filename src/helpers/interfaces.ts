@@ -10,4 +10,5 @@ export interface IUser {
 
 export interface IUserEntity extends IUser {
   coordinates: Object
+  id: string
 }

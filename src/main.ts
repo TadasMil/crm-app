@@ -5,6 +5,12 @@ import './modules/useVeeValidations.js'
 
 import { Router } from './router'
 
+declare global {
+  interface Window {
+    L: any
+  }
+}
+
 const app = createApp(App)
 
 app.use(Router)

@@ -2,8 +2,8 @@
 import { ButtonHTMLAttributes, computed } from 'vue'
 
 interface Props {
-  type: ButtonHTMLAttributes['type']
-  buttonType: string
+  type?: ButtonHTMLAttributes['type']
+  buttonType?: string
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -12,8 +12,13 @@ const props = withDefaults(defineProps<Props>(), {
 })
 
 const emit = defineEmits<{
-  (e: 'click'): void
+  (e: 'click'): () => void
 }>()
+
+const onClick = () => {
+  console.log('here')
+  emit('click')
+}
 
 const typeIsPrimary = computed(() => props.buttonType === 'primary')
 const typeIsSuccess = computed(() => props.buttonType === 'success')
@@ -28,7 +33,7 @@ const typeIsSuccess = computed(() => props.buttonType === 'success')
         typeIsPrimary,
       'border border-success text-success': typeIsSuccess,
     }"
-    @click="emit('click')"
+    @click="onClick"
   >
     <slot name="icon" />
     <slot />

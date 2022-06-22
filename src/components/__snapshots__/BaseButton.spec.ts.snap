@@ -1,0 +1,5 @@
+// Vitest Snapshot v1
+
+exports[`BaseButton.spec.js > should render primary button 1`] = `"<button class=\\"rounded-lg px-4 py-1 bg-primary font-medium tracking-widest text-white outline-none hover:bg-primary-200\\" type=\\"button\\"></button>"`;
+
+exports[`BaseButton.spec.js > should render success button 1`] = `"<button class=\\"rounded-lg px-4 py-1 border border-success text-success\\" type=\\"button\\"></button>"`;

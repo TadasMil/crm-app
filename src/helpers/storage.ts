@@ -1,6 +1,6 @@
 import { IUserEntity } from './interfaces'
 
-const LOCAL_STORAGE_KEYS = {
+export const LOCAL_STORAGE_KEYS = {
   USERS: 'crm-users',
 }
 
@@ -10,18 +10,24 @@ export const getObject = (key: string) => {
 }
 
 export const setObject = (key: string, value: any) => {
-  if (value) {
-    localStorage.setItem(key, JSON.stringify(value))
-  } else {
-    localStorage.removeItem(key)
-  }
+  localStorage.setItem(key, JSON.stringify(value))
 }
 
 const getUsers = () => getObject(LOCAL_STORAGE_KEYS.USERS)
 
 const addNewUser = (user: IUserEntity) => {
-  const users = [...getUsers(), user]
-  setObject(LOCAL_STORAGE_KEYS.USERS, users)
+  const users = [...getUsers()]
+
+  const foundUser = users.find((currentUser) => currentUser.id === user.id)
+
+  if (!foundUser) {
+    setObject(LOCAL_STORAGE_KEYS.USERS, [...users, user])
+  } else {
+    setObject(LOCAL_STORAGE_KEYS.USERS, [
+      ...users.filter((x) => x.id !== user.id),
+      user,
+    ])
+  }
 }
 
 export const storage = {
