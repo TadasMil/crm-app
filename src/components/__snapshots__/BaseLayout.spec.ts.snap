@@ -1,0 +1,9 @@
+// Vitest Snapshot v1
+
+exports[`BaseLayout.spec.js > should render the component with pageName 1`] = `
+"<div class=\\"bg-secondary\\">
+  <div class=\\"mx-4 space-y-4\\">
+    <h1 class=\\"border-text-primary flex h-20 w-full items-end border-b border-primary pb-1 text-2xl font-bold uppercase tracking-widest text-primary\\">Home</h1>
+  </div>
+</div>"
+`;

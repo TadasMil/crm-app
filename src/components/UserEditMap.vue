@@ -6,12 +6,12 @@ interface ICoordinates {
   lng: number
 }
 
-interface IUserCoordinates {
+interface ILarCoordinates {
   lat: ICoordinates
 }
 
 interface Props {
-  coordinates: IUserCoordinates
+  coordinates: ILarCoordinates
 }
 
 const props = withDefaults(defineProps<Props>(), {

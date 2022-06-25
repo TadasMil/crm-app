@@ -2,7 +2,7 @@
 import BaseIcon from './BaseIcon.vue'
 
 defineProps<{
-  title: string
+  title?: string
 }>()
 </script>
 

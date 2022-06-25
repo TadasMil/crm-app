@@ -1,0 +1,7 @@
+// Vitest Snapshot v1
+
+exports[`BaseIcon.spec.js > should render icon 1`] = `
+"<svg class=\\"block flex-shrink-0 fill-current\\">
+  <use href=\\"/icons/dashboard.svg?#user\\" xlink:href=\\"/icons/dashboard.svg?#user\\"></use>
+</svg>"
+`;

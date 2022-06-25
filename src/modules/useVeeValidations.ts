@@ -26,7 +26,7 @@ defineRule('min', (value: string, params: string[]) => {
   }
 
   if (value.length < 3) {
-    return 'This field must be at least ' + params[0] + ' characters long.'
+    return 'This field must be at least 3 characters long.'
   }
 
   return true

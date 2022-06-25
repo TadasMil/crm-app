@@ -1,0 +1,15 @@
+// Vitest Snapshot v1
+
+exports[`TheSidebar.spec.js > should render the component 1`] = `
+"<div class=\\"flex flex-col overflow-hidden bg-primary\\">
+  <div class=\\"flex h-20 items-center justify-center shadow-md shadow-white\\">
+    <h1 class=\\"text-3xl font-bold uppercase tracking-widest text-white\\"> CRM </h1>
+  </div>
+  <ul class=\\"flex flex-col py-4\\">
+    <li class=\\"flex items-center space-x-4 px-6 transition-transform duration-200 ease-in hover:translate-x-2 hover:text-secondary\\">
+      <base-icon-stub icon=\\"users\\" class=\\"h-6 w-6 text-white\\"></base-icon-stub>
+      <router-link-stub class=\\"flex h-12 transform flex-row items-center text-lg font-medium tracking-widest text-white outline-none\\" to=\\"[object Object]\\"></router-link-stub>
+    </li>
+  </ul>
+</div>"
+`;

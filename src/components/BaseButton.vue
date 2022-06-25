@@ -15,11 +15,6 @@ const emit = defineEmits<{
   (e: 'click'): () => void
 }>()
 
-const onClick = () => {
-  console.log('here')
-  emit('click')
-}
-
 const typeIsPrimary = computed(() => props.buttonType === 'primary')
 const typeIsSuccess = computed(() => props.buttonType === 'success')
 </script>
@@ -33,7 +28,7 @@ const typeIsSuccess = computed(() => props.buttonType === 'success')
         typeIsPrimary,
       'border border-success text-success': typeIsSuccess,
     }"
-    @click="onClick"
+    @click="emit('click')"
   >
     <slot name="icon" />
     <slot />

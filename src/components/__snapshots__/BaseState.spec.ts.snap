@@ -1,0 +1,17 @@
+// Vitest Snapshot v1
+
+exports[`BaseState.spec.js > should render the component with idle state 1`] = `
+"<div>
+  <div>im idle slot</div>
+</div>"
+`;
+
+exports[`BaseState.spec.js > should render the component with loading state 1`] = `"<base-loading-stub title=\\"We're loading data.. Please wait\\"></base-loading-stub>"`;
+
+exports[`BaseState.spec.js > should render the component with loading state and loading slot 1`] = `"<div>im loading slot</div>"`;
+
+exports[`BaseState.spec.js > should render the component with success state 1`] = `"<base-success-stub title=\\"\\"></base-success-stub>"`;
+
+exports[`BaseState.spec.js > should render the component with success state 2`] = `"<base-success-stub title=\\"\\"></base-success-stub>"`;
+
+exports[`BaseState.spec.js > should render the component with success state and success slot 1`] = `"<div>success slot</div>"`;

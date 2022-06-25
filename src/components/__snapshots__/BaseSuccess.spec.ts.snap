@@ -1,0 +1,9 @@
+// Vitest Snapshot v1
+
+exports[`BaseSuccess.spec.js > should render the component 1`] = `
+"<div class=\\"flex h-full w-full flex-col items-center justify-center space-y-2\\"><svg class=\\"block flex-shrink-0 fill-current h-16 w-16 text-success\\">
+    <use href=\\"/icons/dashboard.svg?#success\\" xlink:href=\\"/icons/dashboard.svg?#success\\"></use>
+  </svg>
+  <p class=\\"font-bold text-success\\"></p>
+</div>"
+`;

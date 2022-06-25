@@ -1,0 +1,55 @@
+// Vitest Snapshot v1
+
+exports[`UsersIndexUserList.spec.js > should render the component 1`] = `
+"<div class=\\"relative overflow-x-auto shadow-md sm:rounded-lg\\">
+  <table class=\\"w-full text-left text-sm\\">
+    <thead class=\\"bg-primary text-xs uppercase text-white\\">
+      <tr>
+        <th scope=\\"col\\" class=\\"px-6 py-3\\">Full Name</th>
+        <th scope=\\"col\\" class=\\"px-6 py-3\\">Email</th>
+        <th scope=\\"col\\" class=\\"px-6 py-3\\">City</th>
+        <th scope=\\"col\\" class=\\"px-6 py-3\\">Street</th>
+        <th scope=\\"col\\" class=\\"px-6 py-3\\">House Number</th>
+        <th scope=\\"col\\" class=\\"px-6 py-3\\">Zipcode</th>
+        <th scope=\\"col\\" class=\\"px-6 py-3\\"><span class=\\"sr-only\\">Edit</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class=\\"border-b odd:bg-white even:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 odd:dark:bg-gray-800 even:dark:bg-gray-700\\">
+        <th scope=\\"row\\" class=\\"whitespace-nowrap px-6 py-4 font-medium text-gray-900 dark:text-white\\">Tadas123 Tadas12</th>
+        <td class=\\"px-6 py-4\\">ga@test.com</td>
+        <td class=\\"px-6 py-4\\">Vilnius</td>
+        <td class=\\"px-6 py-4\\">Zirmunu</td>
+        <td class=\\"px-6 py-4\\">141</td>
+        <td class=\\"px-6 py-4\\">LT-06612</td>
+        <td class=\\"px-6 py-4 text-right\\">
+          <router-link-stub to=\\"[object Object]\\" class=\\"font-medium text-primary hover:underline\\"></router-link-stub>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>"
+`;
+
+exports[`UsersIndexUserList.spec.js > should render the no data component given empty users list 1`] = `
+"<div class=\\"relative overflow-x-auto shadow-md sm:rounded-lg\\">
+  <table class=\\"w-full text-left text-sm\\">
+    <thead class=\\"bg-primary text-xs uppercase text-white\\">
+      <tr>
+        <th scope=\\"col\\" class=\\"px-6 py-3\\">Full Name</th>
+        <th scope=\\"col\\" class=\\"px-6 py-3\\">Email</th>
+        <th scope=\\"col\\" class=\\"px-6 py-3\\">City</th>
+        <th scope=\\"col\\" class=\\"px-6 py-3\\">Street</th>
+        <th scope=\\"col\\" class=\\"px-6 py-3\\">House Number</th>
+        <th scope=\\"col\\" class=\\"px-6 py-3\\">Zipcode</th>
+        <th scope=\\"col\\" class=\\"px-6 py-3\\"><span class=\\"sr-only\\">Edit</span></th>
+      </tr>
+    </thead>
+    <tbody class=\\"h-20 w-full bg-white\\">
+      <tr class=\\"text-md text-center\\">
+        <td colspan=\\"7\\">No users found.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>"
+`;

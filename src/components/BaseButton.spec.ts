@@ -37,20 +37,28 @@ describe('BaseButton.spec.js', () => {
     expect(wrapper).toContain(buttonDefaultSlotText)
   })
 
+  it('should render icon slot', () => {
+    const { html } = render(BaseButton, {
+      slots: {
+        icon: '<div>icon</div>',
+      },
+    })
+
+    expect(html()).toContain('icon')
+  })
+
   it('should emit click event', async () => {
-    const wrapper = render(BaseButton, {
+    const { emitted } = render(BaseButton, {
       slots: {
         default: '<h2>default</h2>',
       },
     })
 
     const user = userEvent.setup()
-    wrapper.debug()
     const button = screen.getByRole('button')
-
     await user.click(button)
 
-    console.log(wrapper.emitted())
-    expect(wrapper.emitted()).toHaveBeenCalled()
+    expect(emitted().click).toBeTruthy()
+    expect(emitted().click.length).toBe(1)
   })
 })
