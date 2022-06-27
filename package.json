@@ -1,6 +1,9 @@
 {
-  "name": "cuntlink",
+  "name": "crm-app",
   "version": "0.0.0",
+  "engines": {
+    "node": "18.0.0"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
