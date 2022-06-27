@@ -2,12 +2,12 @@
   "name": "cuntlink",
   "version": "0.0.0",
   "scripts": {
-    "start": "node server.js",
+    "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
     "lint:script": "eslint --ext .ts,vue --ignore-path .gitignore .",
-    "heroku-postbuild": "npm install --only=dev --no-shrinkwrap && npm run build",
-    "test": "vitest"
+    "test": "vitest",
+    "start": "node server.js"
   },
   "dependencies": {
     "@testing-library/dom": "^8.14.0",
