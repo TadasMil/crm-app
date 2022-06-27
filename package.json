@@ -6,6 +6,7 @@
   },
   "scripts": {
     "dev": "npm run build && nodemon server.js",
+    "serve": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
     "lint:script": "eslint --ext .ts,vue --ignore-path .gitignore .",
