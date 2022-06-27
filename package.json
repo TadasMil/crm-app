@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "lint:script": "eslint --ext .ts,vue --ignore-path .gitignore .",
     "test": "vitest",
-    "start": "node server.js"
+    "start": "npm run build && node server.js"
   },
   "dependencies": {
     "@testing-library/dom": "^8.14.0",
