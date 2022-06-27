@@ -5,12 +5,12 @@
     "node": "18.0.0"
   },
   "scripts": {
-    "dev": "vite",
+    "dev": "npm run build && nodemon server.js",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
     "lint:script": "eslint --ext .ts,vue --ignore-path .gitignore .",
     "test": "vitest",
-    "start": "npm run build --only=dev && node server.js"
+    "start": "node server.js"
   },
   "dependencies": {
     "@testing-library/dom": "^8.14.0",
